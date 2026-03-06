@@ -30,9 +30,9 @@ function exibirResultado() {
   let imposto = calcularImposto(salario);
   let efetiva = calcularAliquotaEfetiva(salario, imposto);
 
-  saida.innerHTML =
-    `IRPF: R$ ${imposto.toFixed(2)}<br>` +
-    `Alíquota efetiva: ${efetiva.toFixed(2)}%`;
+ saida.innerHTML =
+`IRPF: R$ ${imposto.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>
+Alíquota efetiva: ${efetiva.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}%`;
 }
 
 
